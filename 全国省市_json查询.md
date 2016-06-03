@@ -6,12 +6,12 @@
    
    在java中解析了一下,并生成了对应的json格式.
    
-   可以通过QueryCPC/QueryAll.php 获取所有的省级别的列表,(get方式)
+   可以通过http://182.254.210.18/QueryCPC/QueryAll.php 获取所有的省级别的列表,(get方式)
             
-    {"province":[{"name:","省级别名"},{"name":"北京"},{"name":"天津"},....]}
+    {"province":[{"name:","省级别名","province_id" : "id"},[{"name":"北京","province_id" : "0"},{"name":"天津","province_id" : "1"},,....]}
     
     
-   通过 QueryCPC/QueryCity.php?pr=name 将省级别名替换name作为pr的参数传入(get方式)
+   通过 http://182.254.210.18/QueryCPC/QueryCity.php?pr=name 将对应省的id替换name作为pr的参数传入(get方式)
        
     {"city":[{"name:","地级市名"},{"name":"沈阳"},{"name":"大连"},...]}
     
